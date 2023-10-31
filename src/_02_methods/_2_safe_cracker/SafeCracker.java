@@ -8,6 +8,7 @@ import java.io.File;
 import java.util.Random;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class SafeCracker {
@@ -29,7 +30,25 @@ public class SafeCracker {
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */		
-
+		String prompt =  "enter a 6-7 digit number ";
+		
+		JFrame frame = new JFrame("");
+		frame.setSize(0, 0);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
+		
+		Boolean play = true;
+		
+		while(play) {
+//			String guess = JOptionPane.showInputDialog(null, prompt);
+//			int guessInt = Integer.parseInt(guess);
+			for (int x = 9999000; x <= 9999999; x++) {
+				tryCode(x);
+			}
+			
+		}
+		
 	}
 
 	 void tryCode(int guess) {

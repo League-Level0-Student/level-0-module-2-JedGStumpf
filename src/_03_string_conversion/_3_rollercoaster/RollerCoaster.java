@@ -1,10 +1,30 @@
 package _03_string_conversion._3_rollercoaster;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class RollerCoaster {
 
 	// 1) Make a main method that includes all the steps below…. 
+	public static void main(String[] args) {
+		String prompt =  "Enter your height in inches";
+//		String prompt1 =  "Enter the Number 6";
+		
+		JFrame frame = new JFrame("");
+		frame.setSize(0, 0);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
+		int heightToInt = Integer.parseInt(JOptionPane.showInputDialog(null, prompt));
+//				
+		if (heightToInt > 42) {
+			JOptionPane.showMessageDialog(null, "You Can Ride");
+		} else {
+			JOptionPane.showMessageDialog(null, "Too Short To Ride");
+		}
+		
+		
+	}
 		
 		// 2) Ask the user to enter their height in inches using JOptionPane and set it to the variable heightToRide
 		

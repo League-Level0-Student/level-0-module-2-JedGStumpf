@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class FixTheRandom {
 
-	// This program is supposed to get a random number between 5 and 10 and print a different message for each number.
+	// This program is supposed to get a random number between 5 and 10 
+	// and print a different message for each number.
 	// BUT it's not working. If you don't believe me, try running it.
 	// Change ONE line of code to fix this program.
 	
@@ -12,7 +13,8 @@ public class FixTheRandom {
 		
 		Random random = new Random();
 		
-		int numnber = random.nextInt(5);
+		int numnber = random.nextInt(5, 10+1);
+		System.out.println(numnber);
 		
 		if (numnber == 5) {
 			System.out.println("FIVE");

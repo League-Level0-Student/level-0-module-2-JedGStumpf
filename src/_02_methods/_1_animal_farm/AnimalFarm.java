@@ -7,6 +7,7 @@ import java.io.File;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class AnimalFarm {
@@ -24,7 +25,33 @@ public class AnimalFarm {
 	}
 	
 	void animals() {
+		String prompt =  "Which Animal? Or enter e to exit";
+		
+		JFrame frame = new JFrame("");
+		frame.setSize(0, 0);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
+		
+		Boolean play = true;
+		while (play) {
+			String animal = JOptionPane.showInputDialog(null, prompt);
+			if (animal.equals("cow")) {
+				moo();
+			} else if (animal.equals("duck")) {
+				quack();
+			} else if (animal.equals("dog")) {
+				woof();
+			} else if (animal.equals("cat")) {
+				meow();
+			} else if (animal.equals("llama")) {
+				llamaScream();
+			} else if (animal.equals("e")) {
+				play = false;
+			}
+		}
 
+	
 		/* 1. Ask the user which animal they want, then see and hear 
 		 *    the animal they chose using one of the methods below.
 		*/			 
